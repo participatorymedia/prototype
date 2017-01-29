@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>{{ page.title }} · {{ site.title }}</title>
+<link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+<a href="#main" class="audible">Skip to main content</a>
+<header role="banner" id="banner" class="page-{{ page.title | slugify}}">
+  <h1><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+  <nav id="global-nav" role="navigation">
+    <a href="{{ site.baseurl }}/">Home</a>
+    <a href="{{ site.baseurl }}/films/">Films</a>
+    <a href="{{ site.baseurl }}/modules/">Modules</a>
+    <a href="{{ site.baseurl }}/about/">About</a>
+  </nav>
+</header>
+<main id="main" role="main">
+{{ content }}
+</main>
+

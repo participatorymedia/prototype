@@ -1,0 +1,12 @@
+---
+layout: page
+title: Films
+---
+
+<ul class="films">
+{% for film in site.films %}
+<li id="{{ film.title | slugify }}">
+  <a href="{{ film.url }}">{{ film.title }}</a>
+</li>
+{% endfor %}
+</ul>

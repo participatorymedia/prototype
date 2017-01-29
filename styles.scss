@@ -1,0 +1,171 @@
+---
+---
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin:0;
+  padding: 0;
+}
+
+html {
+  font: 16px/1.5 "Raleway", sans-serif;
+  color: #246;
+  color: hsla(200,75%,25%,.9);
+  border-top: 6px solid hsla(200,90%,10%,.9);
+}
+
+body {
+  font-size: 1rem;
+}
+
+a {
+  color: hsla(200,100%,50%,.9);
+
+  &:link {
+    color: hsla(200,100%,50%,.9);
+  }
+  &:visited {
+    color: hsla(200,100%,50%,.75);
+  }
+  &:hover {
+    color: hsla(200,100%,50%,.75);
+  }
+  &:focus {
+    background-color: hsla(200,100%,70%,.25);
+    color: hsla(200,100%,70%,.75);
+    border:none;
+    border: 1px solid hsla(200,100%,50%,.125);
+    box-shadow:none;
+  }
+  &:active {
+    color: hsla(200,80%,20%,.75);
+  }
+}
+
+h1 {
+  font-weight: 200;
+}
+
+
+#banner {
+  display:flex;
+  background-color: hsla(200,90%,10%,.75);
+  justify-content: space-between;
+  padding: 0 1rem;
+  a,a:link {
+    color: white;
+    color: rgba(255,255,255,.9);
+    text-decoration:none;
+  }
+
+  h1,nav {
+    font-size: 1rem;
+    line-height: 3;
+    margin:0;
+    padding:0;
+  }
+
+  nav {
+    text-align:right;
+
+    a + a:before {
+      content: " · ";
+      color: rgba(255,255,255,.5);
+      margin: 0 .25rem;
+    }
+  }
+
+  &.page-home {
+    background-image: url('/images/banner-home.jpg');
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 67vh;
+    min-height: 300px;
+    flex-direction: column;
+    justify-content: flex-end;
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+}
+
+#introduction {
+  max-width: 600px;
+  margin: 3rem auto;
+
+  &:after {
+    display:block;
+    content: " ";
+    background: hsla(200,100%,50%,.75);
+    width: 50px;
+    height: 3px;
+    margin: 3rem auto;
+  }
+}
+
+article {
+  max-width: 67%;
+  margin: 0 auto;
+
+  header {
+    h1 {
+      margin:3rem 0 0;
+      text-align:center;
+      font-size: 2rem;
+      &:after {
+        display:block;
+        content: " ";
+        background: hsla(200,100%,50%,.75);
+        width: 50px;
+        height: 3px;
+        margin: 3rem auto;
+      }
+
+    }
+  }
+}
+
+.modules,
+.films {
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  justify-content: space-between;
+
+  li {
+    width: 48%;
+    text-align:center;
+  }
+  
+  a {
+    display:flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    height: 150px;
+    text-decoration:none;
+    background: hsla(200,100%,50%,.125);
+  }
+
+}
+
+.audible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

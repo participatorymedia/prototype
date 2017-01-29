@@ -1,0 +1,52 @@
+# Global Site Information
+title: Participatory Media
+domain: http://participatorymediaproject.org
+baseurl: ""
+
+# Jekyll Settings
+permalink: /:categories/:title/
+exclude: ['readme.md', '.gitignore', '.sass-cache', 'Gemfile', 'Gemfile.lock', '_linked-data']
+show_drafts: false
+gems: ['jekyll-feed', 'jekyll-sitemap']
+feed:
+  path: atom.xml
+sass:
+  sass_dir: _sass
+  style: compressed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      bodyclass: "post"
+  -
+    scope:
+      path: ""
+      type: "modules"
+    values:
+      layout: "module"
+      bodyclass: "module"
+  -
+    scope:
+      path: ""
+      type: "films"
+    values:
+      layout: "film"
+      bodyclass: "film"
+
+# Collections
+collections:
+  films:
+    output: true
+    permalink: /films/:title/
+  modules:
+    output: true
+    permalink: /modules/:title/
