@@ -1,13 +1,12 @@
 ---
 layout: page
 title: Modules
-permalink: /modules/
 ---
 
 <ul class="modules">
 {% for module in site.modules %}
 <li id="{{ module.title | slugify }}">
-  <a href="{{ module.url }}">{{ module.title }}</a>
+  <a href="{{ module.url | prepend:site.baseurl }}">{{ module.title }}</a>
 </li>
 {% endfor %}
 </ul>
