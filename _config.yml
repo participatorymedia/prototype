@@ -1,7 +1,7 @@
 # Global Site Information
 title: Participatory Media
-domain: http://participatorymediaproject.org
-baseurl: ""
+domain: http://participatorymedia.github.io
+baseurl: "/prototype"
 
 # Jekyll Settings
 permalink: /:categories/:title/
