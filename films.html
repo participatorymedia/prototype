@@ -6,7 +6,7 @@ title: Films
 <ul class="films">
 {% for film in site.films %}
 <li id="{{ film.title | slugify }}">
-  <a href="{{ film.url }}">{{ film.title }}</a>
+  <a href="{{ film.url | prepend:site.baseurl }}">{{ film.title }}</a>
 </li>
 {% endfor %}
 </ul>
