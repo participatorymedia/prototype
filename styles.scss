@@ -86,6 +86,7 @@ h1 {
     background-position: 50% 50%;
     height: 67vh;
     min-height: 300px;
+    max-height: 500px;
     flex-direction: column;
     justify-content: flex-end;
     h1 {
@@ -110,23 +111,79 @@ h1 {
 }
 
 article {
-  max-width: 75%;
-  margin: 0 auto;
 
-  header {
-    h1 {
-      margin:3rem 0 0;
-      text-align:center;
-      font-size: 2rem;
-      &:after {
-        display:block;
-        content: " ";
-        background: hsla(200,100%,50%,.75);
-        width: 50px;
-        height: 3px;
-        margin: 3rem auto;
+  padding: 0 5rem;
+
+  header h1 {
+    text-align:center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    &:after {
+      display:block;
+      content: " ";
+      background: hsla(200,100%,50%,.75);
+      width: 50px;
+      height: 3px;
+      margin: 3rem auto;
+    }
+  }
+
+  &.module {
+
+    header {
+      margin: 0 -5rem;
+      background-color: hsla(200,90%, 10%, .675);
+      background-size: cover;
+      background-position: 50% 50%;
+      background-repeat:no-repeat;
+      border-top: 2px solid hsla(200,90%,10%,.325);
+      padding: 2rem 5rem;
+      color: white;
+      color: rgba(255,255,255,.9);
+      h1 {
+        text-align:left;
+        margin:0;
+        font-size: 3rem;
+        &:after {
+          display:none;
+        }
       }
 
+      p {
+        width: 70%;
+      }
+    }
+
+
+    .local,.content {
+      margin-top: 2rem;
+    }
+    
+    .local {
+      float:left;
+      width: 25%;
+    }
+
+    .content {
+      float:right;
+      width: 70%;
+
+      > :first-child {
+        margin-top:0;
+      }
+      
+    }
+  }
+
+  &#chicago {
+    header {
+      display:flex;
+      height: 50vh;
+      min-height: 300px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-image: url(images/chicago.jpg);
     }
   }
 }
@@ -154,6 +211,11 @@ article {
     background: hsla(200,100%,50%,.125);
   }
 
+}
+
+.local a {
+  display:block;
+  text-decoration:none;
 }
 
 .audible {
