@@ -47,6 +47,3 @@ collections:
   films:
     output: true
     permalink: /films/:title/
-  modules:
-    output: true
-    permalink: /modules/:title/
