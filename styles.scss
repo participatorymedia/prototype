@@ -47,6 +47,12 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
 h1 {
   font-weight: 200;
 }
@@ -237,6 +243,43 @@ article {
   }
 }
 
+.record {
+  .metadata {
+    float:right;
+    width: 32%;
+  }
+  .description {
+    float:left;
+    width: 66%;
+    margin-bottom: 2rem;
+    
+  }
+
+  .related {
+    clear:both;
+    width: 100%;
+    background: rgba(0,0,0,.05);
+    padding: 1rem;
+    h2 {
+      margin-top:0;
+      font-size: 1rem;
+    }
+    
+    nav {
+      display:flex;
+      justify-content: space-between;
+    }
+      a {
+        width: 24%;
+        background: #ccc;
+        color: #333;
+        text-decoration:none;
+        padding: 5rem 1rem;
+        text-align: center;
+      }
+    }
+}
+
 .local {
   float:left;
   width: 25%;
@@ -258,6 +301,7 @@ article {
     margin: .75rem 0;
   }
 }
+
 
 .audible {
   border: 0;
