@@ -3,10 +3,8 @@ layout: page
 title: Films
 ---
 
-<ul class="films">
-{% for film in site.films %}
-<li id="{{ film.title | slugify }}">
-  <a href="{{ film.url | prepend:site.baseurl }}">{{ film.title }}</a>
-</li>
+<div class="films">
+{% for i in (1..100) %}
+<a class="film" href="/films/sample.html">Lorem Ipsum</a>
 {% endfor %}
-</ul>
+</div>
