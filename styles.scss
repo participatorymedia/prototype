@@ -158,11 +158,6 @@ article {
     .local,.content {
       margin-top: 2rem;
     }
-    
-    .local {
-      float:left;
-      width: 25%;
-    }
 
     .content {
       float:right;
@@ -171,7 +166,6 @@ article {
       > :first-child {
         margin-top:0;
       }
-      
     }
   }
 
@@ -211,6 +205,33 @@ article {
     background: hsla(200,100%,50%,.125);
   }
 
+}
+
+.records {
+  float:right;
+  width: 70%;
+  justify-content: space-between;
+  a {
+    width: 22%;
+    height: 100px;
+    margin: .5rem;
+  }
+}
+
+.local {
+  float:left;
+  width: 25%;
+
+  h2 {
+    margin: 2rem 0 0;
+    font-size: 1.25rem;
+    font-weight: 100;
+
+    &:first-child {
+      margin-top:0;
+    }
+  }
+  
 }
 
 .local a {

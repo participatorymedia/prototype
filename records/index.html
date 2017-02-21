@@ -3,8 +3,30 @@ layout: page
 title: Records
 ---
 
+<nav class="local facets">
+  <h2>Themes</h2>
+  <a href="#">food</a>
+  <a href="#">ritual</a>
+  <a href="#">coming of age</a>
+  <a href="#">media making</a>
+  <a href="#">craft</a>
+  <a href="#">politics</a>
+  <a href="#">work</a>
+  <a href="#">traditions</a>
+
+  <h2>Modules</h2>
+  <a href="#">Alaska</a>
+  <a href="#">Appalshop</a>
+  <a href="#">Chicago</a>
+  <a href="#">Otisville</a>
+
+  <h2>Types</h2>
+  <a href="#">Document</a>
+  <a href="#">Film</a>
+  <a href="#">Photo</a>
+</nav>
 <div class="records">
 {% for i in (1..100) %}
-<a class="record" href="/films/sample.html">Lorem Ipsum</a>
+  <a class="record" href="{{ site.baseurl }}/records/show/">Lorem Ipsum</a>
 {% endfor %}
 </div>
