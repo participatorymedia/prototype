@@ -34,16 +34,3 @@ defaults:
     values:
       layout: "module"
       bodyclass: "module"
-  -
-    scope:
-      path: ""
-      type: "films"
-    values:
-      layout: "film"
-      bodyclass: "film"
-
-# Collections
-collections:
-  films:
-    output: true
-    permalink: /films/:title/
