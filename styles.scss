@@ -53,6 +53,12 @@ img {
   height: auto;
 }
 
+video { 
+   width:100%;
+   max-width:500px;
+   height:auto;
+}
+
 h1 {
   font-weight: 200;
 }
@@ -179,21 +185,65 @@ article {
       }
     }
 
-
-    .local,.content {
-      margin-top: 2rem;
-    }
-
     .content {
-      float:right;
-      width: 70%;
+        display:flex;
+        flex-wrap:no-wrap;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+        
+        nav {
+            margin-top: 0;
+        }
+        
+        & > div {
+            width: 48%;
+            border: 1px solid #f0f0f0;
+            margin-top:1rem;
+            padding:0;
+            background: hsla(200,90%,50%,.125);
+        }
 
-      > :first-child {
-        margin-top:0;
-      }
+        section {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
     }
   }
 
+  #dig,
+  #watch {
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      h2,.viewer {
+	    flex-basis:100%;
+      }
+
+      .viewer {
+	    height: 400px;
+	    background: #ddd;
+      }
+  
+  
+      .record {
+	    text-decoration:none;
+	    width: 44%;
+	    margin: 0 0 20px;
+        color: black !important;
+
+ 	    span {
+	      display:block;
+  	    }
+      }
+
+      .active-movie {
+          margin-bottom: 2em;
+          border-bottom: 1px solid rgba(0,0,0,0.5);
+      }
+  }
+  
   &#chicago {
     header {
       display:flex;
@@ -206,6 +256,32 @@ article {
     }
   }
 }
+
+nav.local {
+    display:flex;
+    flex-wrap:no-wrap;
+    width: 100%;
+    align-items: stretch;
+    min-height: 2rem;
+
+    a {
+        text-decoration:none;
+        display:flex;
+        background: hsla(200,100%,50%,.9);
+        color: white;
+        flex-grow: 1;
+        text-align: center;
+        margin-right: 1px;
+        justify-content: center;
+        align-items: center;
+
+        &:hover,
+        &:focus {
+            background: hsla(200,100%,50%,.75);
+        }
+    }
+}
+
 
 .modules,
 .records {
@@ -278,28 +354,6 @@ article {
         text-align: center;
       }
     }
-}
-
-.local {
-  float:left;
-  width: 25%;
-
-  h2 {
-    margin: 2rem 0 0;
-    font-size: 1.25rem;
-    font-weight: 100;
-
-    &:first-child {
-      margin-top:0;
-    }
-  }
-
-  a {
-    display:block;
-    text-decoration:none;
-    line-height: 1.125;
-    margin: .75rem 0;
-  }
 }
 
 

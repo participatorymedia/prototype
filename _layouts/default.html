@@ -1,6 +1,36 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <title>{{ page.title }} · {{ site.title }}</title>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+$(document).ready(function() {
+
+    $(".essay section").css("display","none");
+    $(".supporting-material section").css("display","none");
+
+    $('#watch').css('display','flex');
+    $('#context').css('display','block');
+
+    $(".essay nav a").click(function(event) {
+        event.preventDefault();
+        $(this).addClass("current");
+        $(this).siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".essay section").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+
+    $(".supporting-material nav a").click(function(event) {
+        event.preventDefault();
+        $(this).addClass("current");
+        $(this).siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".supporting-material section").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+
+});
+</script>
 <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 <a href="#main" class="audible">Skip to main content</a>
 <header role="banner" id="banner" class="page-{{ page.title | slugify}}">
